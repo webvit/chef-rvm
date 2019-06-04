@@ -8,7 +8,7 @@ run_nokogiri_openssl_test() {
   local requires="require 'nokogiri';"
   local script="$requires puts Nokogiri::HTML(open('$https_url')).css('input')"
 
-  run rvm $rubie do gem install nokogiri --no-ri --no-rdoc
+  run rvm $rubie do gem install nokogiri --no-document
   [ "$status" -eq 0 ]
 
   run rvm $rubie do ruby -rrubygems -ropen-uri -e "$script"

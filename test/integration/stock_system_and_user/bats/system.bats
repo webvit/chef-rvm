@@ -34,7 +34,7 @@ setup() {
 }
 
 @test "default Ruby can install nokogiri gem" {
-  run rvm $default_ruby do gem install nokogiri --no-ri --no-rdoc
+  run rvm $default_ruby do gem install nokogiri --no-document
   [ $status -eq 0 ]
 }
 
